@@ -1,0 +1,78 @@
+.automation-field {
+    margin-bottom: 20px;
+}
+
+.automation-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.automation-field input[type="text"],
+.automation-field select {
+    width: 100%;
+    max-width: 600px;
+    padding: 8px;
+}
+
+.service-settings,
+.action-settings {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccd0d4;
+    background: #fff;
+}
+
+.repeater-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 100px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.repeater-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 100px;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.repeater-row input {
+    width: 100%;
+    padding: 5px;
+}
+
+.add-row {
+    background: #2271b1;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.remove-row {
+    background: #dc3232;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.service-settings,
+.action-settings {
+    display: none;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccd0d4;
+    background: #fff;
+}
+
+#service_actions_container {
+    border: none;
+    padding: 0;
+}
+
+.service-settings.active,
+.action-settings.active {
+    display: block;
+}
