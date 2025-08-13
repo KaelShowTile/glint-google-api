@@ -13,6 +13,8 @@ class Automation_Registry {
             'numberposts' => -1,
         ]);
 
+        require_once GOOGLE_AUTOMATION_PATH . 'includes/hooks/class-abstract-hook.php';
+
         foreach ($automations as $automation) {
             $hook_name = get_post_meta($automation->ID, 'wp_hook', true);
             $service = get_post_meta($automation->ID, 'google_service', true);
@@ -51,8 +53,8 @@ class Automation_Registry {
         
         if (isset($hook_map[$hook_name])) {
             $class_name = $hook_map[$hook_name];
-            $file_path = GOOGLE_AUTOMATION_PATH . "includes/hooks/class-{$hook_name}-hook.php";
-            
+            $file_path = GOOGLE_AUTOMATION_PATH . "includes/hooks/class-".strtolower($class_name).".php";
+
             if (!class_exists($class_name) && file_exists($file_path)) {
                 require_once $file_path;
             }

@@ -7,6 +7,8 @@ class Google_Sheets_Service {
             error_log('Google Sheets credentials missing');
             return false;
         }
+
+        error_log("Prepare to send...");
         
         // Load Google API client
         require_once GOOGLE_AUTOMATION_PATH . 'google-api-php-client/vendor/autoload.php';
